@@ -1,0 +1,11 @@
+{
+  "name": "wetube",
+  "version": "1.0.0",
+  "description": "youtube cloning",
+  "main": "index.js",
+  "author": "Amin Darestani",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
