@@ -6,6 +6,20 @@
   "author": "Amin Darestani",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "@babel/core": "^7.24.9",
+    "@babel/node": "^7.24.8",
+    "@babel/preset-env": "^7.24.8",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.3"
+  },
+  "scripts": {
+    "start": "nodemon --exec babel-node init.js --delay 2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
   }
 }
