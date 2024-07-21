@@ -1,11 +1,10 @@
 doctype html
 html
     head
-        <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css">
-        title WeTube
+        <link rel="stylesheet" href="/css/all.css" type="text/css">
+        title #{pageTitle} | #{siteName}
     body
-        header
-            h1 WeTube
+        include ../partials/header
         main
             block content
         include ../partials/footer

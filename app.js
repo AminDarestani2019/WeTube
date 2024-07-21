@@ -7,18 +7,21 @@ import userRouter from "./Router/userRouter";
 import videoRouter from "./Router/videoRouter";
 import globalRouter from "./Router/globalRouter";
 import routes from "./routes";
+import { localsMiddleware } from "./middlewares";
 
 const app = express();
+
+
+app.use(helmet());
 app.set("view engine","pug");
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
-
 app.use(morgan("dev"));
-app.use(helmet());
 
-app.use(express.static("node_modules/@fortawesome"));
+app.use(express.static(__dirname + '/public'));
 
+app.use(localsMiddleware)
 app.use(routes.home,globalRouter);
 app.use(routes.users,userRouter);
 app.use(routes.videos,videoRouter);

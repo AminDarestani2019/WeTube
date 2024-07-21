@@ -1,5 +1,3 @@
-import { xPermittedCrossDomainPolicies } from "helmet";
-
 //Global
 const HOME = "/";
 const JOIN = "/join";
